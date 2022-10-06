@@ -60,7 +60,7 @@ public class Title {
             s.append(" lang=\"").append(lang).append("\"");
         }
         s.append(">");
-        s.append(XMLTV.escapeXml(title));
+        s.append(XMLTV.escapeXml(title, false));
         s.append("</").append(name).append(">\n");
         return s.toString();
     }

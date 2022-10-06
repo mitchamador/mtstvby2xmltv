@@ -61,7 +61,7 @@ public class DisplayName {
             s.append(" lang=\"").append(lang).append("\"");
         }
         s.append(">");
-        s.append(XMLTV.escapeXml(name));
+        s.append(XMLTV.escapeXml(name, false));
         s.append("</display-name>\n");
         return s.toString();
     }

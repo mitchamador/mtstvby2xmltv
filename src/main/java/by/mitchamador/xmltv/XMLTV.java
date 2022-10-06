@@ -69,14 +69,19 @@ public class XMLTV {
         return 0;
     }
 
-    public static String escapeXml(String st){
+    public static String escapeXml(String st, boolean attribute) {
         if (st == null) return "";
         //st = st.replaceAll("[^\\u0020-\\uD7FF\\uE000-\\uFFFD\\t\\n\\r]", " ");
+
         st = st.replace("&", "&amp;");
-        st = st.replace("'", "&apos;");
         st = st.replace(">", "&gt;");
         st = st.replace("<", "&lt;");
-        st = st.replace("\"", "&quot;");
+
+        if (attribute) {
+            st = st.replace("'", "&apos;");
+            st = st.replace("\"", "&quot;");
+        }
+
         return st;
     }
 

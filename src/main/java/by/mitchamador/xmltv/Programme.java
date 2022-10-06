@@ -137,7 +137,7 @@ public class Programme {
     public String toXml(int level) {
         StringBuilder s = new StringBuilder(1024);
         s.append(XMLTV.getIndent(level)).append("<programme");
-        s.append(" channel=\"").append(XMLTV.escapeXml(channel)).append("\"");
+        s.append(" channel=\"").append(XMLTV.escapeXml(channel, true)).append("\"");
         s.append(" start=\"").append(XMLTV.DATE_FORMAT.format(start)).append("\"");
         s.append(" stop=\"").append(XMLTV.DATE_FORMAT.format(stop)).append("\"");
         s.append(">\n");

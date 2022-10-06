@@ -55,7 +55,7 @@ public class Category {
             s.append(" lang=\"").append(lang).append("\"");
         }
         s.append(">");
-        s.append(XMLTV.escapeXml(name));
+        s.append(XMLTV.escapeXml(name, false));
         s.append("</category>\n");
         return s.toString();
     }
